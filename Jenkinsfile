@@ -15,7 +15,7 @@ pipeline {
         stage("Docker Build") {
             steps {
               sh '''
-                  oc start-build -F openshift-planets
+                  oc start-build -F openshift-planets --from-dir=.
               '''
             }
         }
